@@ -21,13 +21,13 @@ function App() {
   }, []);
 
   async function loadRooms() {
-    const response = await fetch("http://localhost:3000/rooms");
+    const response = await fetch("https://hotel-app-4ja4.onrender.com/rooms");
     const data = await response.json();
     setRooms(data);
   }
 
   async function handleLogin() {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://hotel-app-4ja4.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -91,7 +91,7 @@ function App() {
         ? "occupied"
         : "empty";
 
-    await fetch(`http://localhost:3000/rooms/${id}`, {
+    await fetch(`https://hotel-app-4ja4.onrender.com/rooms/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
