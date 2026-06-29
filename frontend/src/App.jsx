@@ -57,7 +57,7 @@ function App() {
   if (!loggedIn) {
     return (
       <div>
-        <h1>Logowanie</h1>
+        <h1>Hotel Rooms App</h1>
 
         <input
           placeholder="Login"

@@ -8,7 +8,11 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://hotel-app-mu-two.vercel.app"
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
